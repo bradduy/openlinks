@@ -1,0 +1,20 @@
+{
+    "name": "Support open link extension",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["app.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.memrise.com/*"],
+            "js": ["app.js"]
+        }
+    ],
+    "browser_action": {   
+        "default_icon": "/images/unnamed.png",   
+        "default_title": "Brad Duy - 陈维",
+        "default_popup": "home.html"
+    }
+}
